@@ -17,6 +17,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+%define api.prefix {printf_format_}
+
 %{
 
 #include <libexplain/ac/assert.h>

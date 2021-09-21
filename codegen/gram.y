@@ -17,6 +17,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+%define api.prefix {gram_}
+
 %{
 
 #include <libexplain/ac/stdio.h>

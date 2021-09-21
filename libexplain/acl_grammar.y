@@ -17,6 +17,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+%define api.prefix {acl_grammar_}
+
 %{
 
 #include <libexplain/ac/ctype.h>
