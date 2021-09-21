@@ -42,7 +42,7 @@ explain_buffer_strerror(explain_string_buffer_t *sb, int errnum)
             explain_gettext
             (
                 /*
-                 * xgettext: This message is used when streror (or strerror_r)
+                 * xgettext: This message is used when strerror (or strerror_r)
                  * is unable to translate an errno value, in which ase this
                  * fall-back message is used.  This does not occur with glibc,
                  * but other libc implemntations are more flakey.

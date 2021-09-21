@@ -69,7 +69,7 @@ void explain_buffer_enametoolong2(explain_string_buffer_t *sb,
 
 /**
   * The explain_buffer_enametoolong_gethostname function is sued to
-  * print an explaination for an ENAMETOOLONG error reported by the
+  * print an explanation for an ENAMETOOLONG error reported by the
   * gethostname, getdomainname (etc) functions.
   *
   * @param sb

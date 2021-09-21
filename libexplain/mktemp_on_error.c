@@ -39,7 +39,7 @@ explain_mktemp_on_error(char *templat)
      *     made an empty string."
      *
      * So, instead of returning a NULL pointer like the vast majority of libc
-     * functions, this one returns the orginal string, but sets the first byte
+     * functions, this one returns the original string, but sets the first byte
      * to '\0'.  Sheesh!  This makes our job much harder.
      */
     first = templat[0];

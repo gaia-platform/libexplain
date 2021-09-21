@@ -224,7 +224,7 @@ explain_buffer_errno_acl_set_file_explanation(explain_string_buffer_t *sb,
          * new ACL cannot be extended or the file system is out
          * of file allocation resources.
          */
-        explain_buffer_enospc(sb, pathname, "pathnme");
+        explain_buffer_enospc(sb, pathname, "pathname");
         break;
 
     case ENOTDIR:

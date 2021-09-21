@@ -540,7 +540,7 @@ explain_buffer_errno_mount_explanation(explain_string_buffer_t *sb, int errnum,
             (
                 sb,
                 /* FIXME: i18n */
-                "target is still busy with open files or working diretories "
+                "target is still busy with open files or working directories "
             );
             return;
         }

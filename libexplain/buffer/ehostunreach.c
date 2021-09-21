@@ -27,7 +27,7 @@ explain_buffer_ehostunreach(explain_string_buffer_t *sb)
     (
         sb,
         /*
-         * xgettext: This eror message is issued to explain an
+         * xgettext: This error message is issued to explain an
          * EHOSTUNREACH error.
          */
         i18n("the remote host does not appear to be connected to the "

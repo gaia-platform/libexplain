@@ -23,7 +23,7 @@
 
 /**
   * The explain_buffer_ehostunreach function may be used
-  * to print an explaination of an EHOSTUNREACH error.
+  * to print an explanation of an EHOSTUNREACH error.
   *
   * @param sb
   *     The string buffer to print into.

@@ -25,7 +25,7 @@ struct eisdir; /* forward */
 
 /**
   * The explain_buffer_eisdir function may be used to print an
-  * explainaton for an EISDIR error, in the case where a file was to be
+  * explanation for an EISDIR error, in the case where a file was to be
   * opened for writing.
   *
   * @param sb

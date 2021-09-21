@@ -159,7 +159,7 @@ explain_buffer_errno_read_explanation(explain_string_buffer_t *sb, int errnum,
                 (
                     sb,
                     /* FIXME: i18n */
-                    "the file desriptor is attached to an object "
+                    "the file descriptor is attached to an object "
                     "which is unsuitable for reading; or, the file was "
                     "opened with the O_DIRECT flag, and either the "
                     "address specified in data, the value specified "

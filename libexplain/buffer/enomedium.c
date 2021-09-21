@@ -339,7 +339,7 @@ explain_buffer_enomedium_generic(explain_string_buffer_t *sb)
         sb,
         /*
          * xgettext:  This error message is issued to explain an
-         * ENOMEDIUM error, when a more specific explaination is not
+         * ENOMEDIUM error, when a more specific explanation is not
          * available.
          */
         i18n("the disk drive is a type that has removable disks, and there "

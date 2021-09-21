@@ -115,7 +115,7 @@ print_h_errno_description(explain_string_buffer_t *sb, int h_errno_value,
         sb,
 
         /*
-         * xgettext: This message is used when hstreror is unable to translate
+         * xgettext: This message is used when hstrerror is unable to translate
          * an h_errno value, in which causes this fall-back message to be used.
          */
         i18n("unknown <netdb.h> error")
