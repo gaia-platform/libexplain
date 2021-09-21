@@ -27,10 +27,10 @@
 
 static const explain_parse_bits_table_t table[] =
 {
-    { "F_OK", F_OK },
-    { "R_OK", R_OK },
-    { "W_OK", W_OK },
     { "X_OK", X_OK },
+    { "W_OK", W_OK },
+    { "R_OK", R_OK },
+    { "F_OK", F_OK },
 };
 
 

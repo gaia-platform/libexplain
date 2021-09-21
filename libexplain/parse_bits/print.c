@@ -26,7 +26,7 @@ explain_parse_bits_print(explain_string_buffer_t *sb, int value,
     const explain_parse_bits_table_t *table, int table_size)
 {
     int             first;
-    int             other;
+    int             i;
 
     if (value == 0)
     {
@@ -34,32 +34,26 @@ explain_parse_bits_print(explain_string_buffer_t *sb, int value,
         return;
     }
     first = 1;
-    other = 0;
-    for (;;)
-    {
-        int             bit;
-        const explain_parse_bits_table_t *tp;
 
-        bit = value & -value;
-        value -= bit;
-        tp = explain_parse_bits_find_by_value(bit, table, table_size);
-        if (tp)
+    // Iterate over entire table checking value against each flag
+    for (i = 0; i < table_size && value != 0; i++)
+    {
+        int flag = table[i].value;
+        if (flag != 0 && (flag & value) == flag)
         {
+            value -= flag;
+
             if (!first)
                 explain_string_buffer_puts(sb, " | ");
-            explain_string_buffer_puts(sb, tp->name);
+            explain_string_buffer_puts(sb, table[i].name);
             first = 0;
         }
-        else
-            other |= bit;
-        if (!value)
-            break;
     }
-    if (other)
+    if (value != 0)
     {
         if (!first)
             explain_string_buffer_puts(sb, " | ");
-        explain_string_buffer_printf(sb, "0x%X", other);
+        explain_string_buffer_printf(sb, "0x%X", value);
     }
 }
 

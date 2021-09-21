@@ -158,7 +158,7 @@ void
 explain_buffer_open_flags(explain_string_buffer_t *sb, int flags)
 {
     int             low_bits;
-    int             other;
+    int             i;
 
     low_bits = flags & O_ACCMODE;
     flags &= ~O_ACCMODE;
@@ -194,25 +194,21 @@ explain_buffer_open_flags(explain_string_buffer_t *sb, int flags)
         explain_string_buffer_printf(sb, "%d", low_bits);
         break;
     }
-    other = 0;
-    while (flags != 0)
-    {
-        int             bit;
-        const explain_parse_bits_table_t *tp;
 
-        bit = (flags & -flags);
-        flags &= ~bit;
-        tp = explain_parse_bits_find_by_value(bit, table, SIZEOF(table));
-        if (tp)
+    // Iterate over entire table checking flags against each flag
+    for (i = 0; i < SIZEOF(table) && flags != 0; i++)
+    {
+        int curr_flag = table[i].value;
+        if (curr_flag != 0 && (curr_flag & flags) == curr_flag)
         {
+            flags -= curr_flag;
+
             explain_string_buffer_puts(sb, " | ");
-            explain_string_buffer_puts(sb, tp->name);
+            explain_string_buffer_puts(sb, table[i].name);
         }
-        else
-            other |= bit;
     }
-    if (other != 0)
-        explain_string_buffer_printf(sb, " | %#o", other);
+    if (flags != 0)
+        explain_string_buffer_printf(sb, " | %#o", flags);
 }
 
 
