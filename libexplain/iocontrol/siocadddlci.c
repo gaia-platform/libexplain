@@ -25,7 +25,7 @@
 #include <libexplain/is_efault.h>
 
 
-#ifdef SIOCADDDLCI
+#if defined(SIOCADDDLCI) && defined(HAVE_LINUX_IF_FRAD_H)
 
 static void
 print_data(const explain_iocontrol_t *p, explain_string_buffer_t *sb,
