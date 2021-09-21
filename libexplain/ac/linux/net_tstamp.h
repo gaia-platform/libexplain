@@ -28,6 +28,7 @@
 #include <libexplain/config.h>
 
 #ifdef HAVE_LINUX_NET_TSTAMP_H
+#include <sys/types.h> /* clockid_t */
 #include <linux/net_tstamp.h>
 #endif
 
