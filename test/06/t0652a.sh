@@ -34,9 +34,9 @@ test $? -eq 0 || no_result
 # There is an alternative result, depending on the testing enviroment,
 # because stdin may actually be closed.
 fmt > test.ok.2 << 'fubar'
-fputs(s = "yuck", fp = stdin) failed, Bad file descriptor (EBADF)
-because fildes does not refer to an open file; this is more likely to
-be a software error (a bug) than it is to be a user error
+fputs(s = "yuck", fp = stdin) failed, Bad file descriptor (EBADF) because
+the fildes argument does not refer to an object that is open for writing
+(O_RDONLY | O_LARGEFILE)
 fubar
 test $? -eq 0 || no_result
 

@@ -32,7 +32,7 @@ test $? -eq 0 || fail
 
 fmt -w 800 test.out.4 > test.out.3
 test $? -eq 0 || no_result
-sed -e 's|(42 ".*",|(42,|' test.out.3 > test.out.2
+sed -e 's|(pid = 42 ".*",|(pid = 42,|' test.out.3 > test.out.2
 test $? -eq 0 || no_result
 fmt test.out.2 > test.out
 test $? -eq 0 || no_result
