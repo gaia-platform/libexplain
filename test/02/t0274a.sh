@@ -22,13 +22,13 @@ TEST_SUBJECT="socket EPROTONOSUPPORT"
 . test_prelude
 
 cat > test.ok << 'fubar'
-socket(family = PF_INET, type = SOCK_STREAM, protocol = 32767) failed,
-Protocol not supported (EPROTONOSUPPORT) because the protocol type or the
-specified protocol is not supported within this address family
+socket(family = PF_INET, type = SOCK_STREAM, protocol = IPPROTO_RAW)
+failed, Protocol not supported (EPROTONOSUPPORT) because the protocol type
+or the specified protocol is not supported within this address family
 fubar
 test $? -eq 0 || no_result
 
-test_socket af_inet SOCK_STREAM 32767 > test.out 2>&1
+test_socket af_inet SOCK_STREAM IPPROTO_RAW > test.out 2>&1
 if test $? -ne 1
 then
     exho expected to fail
