@@ -44,7 +44,7 @@ explain_buffer_file_inode_flags(explain_string_buffer_t *sb, int value)
         { "FS_DIRTY_FL", FS_DIRTY_FL },
         { "FS_COMPRBLK_FL", FS_COMPRBLK_FL },
         { "FS_NOCOMP_FL", FS_NOCOMP_FL },
-        { "FS_ECOMPR_FL", FS_ECOMPR_FL },
+        { "FS_ENCRYPT_FL", FS_ENCRYPT_FL },
         { "FS_BTREE_FL", FS_BTREE_FL },
         { "FS_INDEX_FL", FS_INDEX_FL },
         { "FS_IMAGIC_FL", FS_IMAGIC_FL },
@@ -52,8 +52,13 @@ explain_buffer_file_inode_flags(explain_string_buffer_t *sb, int value)
         { "FS_NOTAIL_FL", FS_NOTAIL_FL },
         { "FS_DIRSYNC_FL", FS_DIRSYNC_FL },
         { "FS_TOPDIR_FL", FS_TOPDIR_FL },
+        { "FS_HUGE_FILE_FL", FS_HUGE_FILE_FL },
         { "FS_EXTENT_FL", FS_EXTENT_FL },
-        { "FS_DIRECTIO_FL", FS_DIRECTIO_FL },
+        { "FS_EA_INODE_FL", FS_EA_INODE_FL },
+        { "FS_EOFBLOCKS_FL", FS_EOFBLOCKS_FL },
+        { "FS_NOCOW_FL", FS_NOCOW_FL },
+        { "FS_INLINE_DATA_FL", FS_INLINE_DATA_FL },
+        { "FS_PROJINHERIT_FL", FS_PROJINHERIT_FL },
         { "FS_RESERVED_FL", FS_RESERVED_FL },
     };
 
