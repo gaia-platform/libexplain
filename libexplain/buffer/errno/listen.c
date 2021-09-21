@@ -72,7 +72,7 @@ append_getsockname(explain_string_buffer_t *sb, int fildes)
 static int
 get_somaxconn(void)
 {
-#ifdef __linux__
+#if defined(__linux__) && defined(SYS__sysctl)
     struct __sysctl_args args;
     long somaxconn;
     size_t somaxconn_size = sizeof(somaxconn);

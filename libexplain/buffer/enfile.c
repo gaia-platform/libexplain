@@ -38,7 +38,7 @@ get_maxfile(void)
 {
     if (explain_option_dialect_specific())
     {
-#ifdef __linux__
+#if defined(__linux__) && defined(SYS__sysctl)
         /*
          * In the linux kernel, if get_empty_filp() returns NULL, the open
          * system call (and others) will return ENFILE.
