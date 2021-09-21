@@ -17,7 +17,7 @@ dnl! You should have received a copy of the GNU General Public License
 dnl! along with this program. If not, see <http://www.gnu.org/licenses/>.
 dnl!
 AC_INIT(install-sh)
-AC_CONFIG_HEADER(libexplain/config.h)
+AC_CONFIG_HEADER(../libexplain/config.h)
 AC_USE_SYSTEM_EXTENSIONS
 AC_LANG_C
 AC_LANG_ASSERT(C)
