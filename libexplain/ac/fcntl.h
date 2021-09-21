@@ -28,14 +28,7 @@
 #include <libexplain/config.h>
 
 #ifdef HAVE_FCNTL_H
-#if defined(__alpha__) && defined(HAVE_LINUX_FCNTL_H)
-#include <libexplain/ac/linux/types.h> /* Ubuntu Hardy needs this first */
-/* This is very strange, but numerous tests fail if we use <fcntl.h>
-   because it appears to have several incorrect macro definitions */
-#include <libexplain/ac/linux/fcntl.h>
-#else
 #include <fcntl.h>
-#endif
 #else
 #include <libexplain/ac/sys/file.h>
 #endif
