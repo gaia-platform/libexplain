@@ -30,26 +30,15 @@
 #include <explain/syscall/ustat.h>
 
 
-#ifndef HAVE_USTAT
-
-struct ustat
-{
-    int dummy;
-};
-
-#endif
-
-
 void
 explain_syscall_ustat(int errnum, int argc, char **argv)
 {
     dev_t           dev;
-    struct ustat    ubuf;
     struct ustat    *ubuf_p;
     struct stat     st;
 
     dev = 0;
-    ubuf_p = &ubuf;
+    ubuf_p = NULL;
     switch (argc)
     {
     case 2:
