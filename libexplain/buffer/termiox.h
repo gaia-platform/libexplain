@@ -25,19 +25,21 @@
    no more defined in Linux kernel since 5.12:
    https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?h=v5.12&id=c762a2b846b619c0f92f23e2e8e16f70d20df800
  */
+#ifndef _LINUX_TERMIOS_H
 struct termiox {};
+#endif
 
 /**
-  * The explain_buffer_termiox function may be used
-  * to print a representation of a termiox structure.
-  *
-  * @param sb
-  *     The string buffer to print into.
-  * @param data
-  *     The termiox structure to be printed.
-  */
+ * The explain_buffer_termiox function may be used
+ * to print a representation of a termiox structure.
+ *
+ * @param sb
+ *     The string buffer to print into.
+ * @param data
+ *     The termiox structure to be printed.
+ */
 void explain_buffer_termiox(explain_string_buffer_t *sb,
-    const struct termiox *data);
+                            const struct termiox *data);
 
 #endif /* LIBEXPLAIN_BUFFER_TERMIOX_H */
 /* vim: set ts=8 sw=4 et : */
