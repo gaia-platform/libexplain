@@ -21,7 +21,11 @@
 
 #include <libexplain/string_buffer.h>
 
-struct termiox; /* forward */
+/* make termiox empty
+   no more defined in Linux kernel since 5.12:
+   https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?h=v5.12&id=c762a2b846b619c0f92f23e2e8e16f70d20df800
+ */
+struct termiox {};
 
 /**
   * The explain_buffer_termiox function may be used
