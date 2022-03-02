@@ -113,7 +113,7 @@ test $? -eq 0 || no_result
 # diff things differs.  And it does, by a carriage return.
 if diff --strip-trailing-cr /dev/null /dev/null > /dev/null 2>&1
 then
-    diffpath=`which diff`
+    diffpath=`command -v diff`
     diff() {
         $diffpath --strip-trailing-cr "$@"
     }
