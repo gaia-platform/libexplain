@@ -23,12 +23,6 @@
 
 struct termiox; /* forward */
 
-// GAIA-PATCH: define termiox struct that is otherwise not
-// found in Linux Kernel 5.11.
-struct termiox {
-
-};
-
 /**
   * The explain_buffer_termiox function may be used
   * to print a representation of a termiox structure.
