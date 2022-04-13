@@ -25,9 +25,9 @@
    no more defined in Linux kernel since 5.12:
    https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?h=v5.12&id=c762a2b846b619c0f92f23e2e8e16f70d20df800
  */
-#ifndef _LINUX_TERMIOS_H
+//#ifndef _LINUX_TERMIOS_H
 struct termiox {};
-#endif
+//#endif
 
 /**
  * The explain_buffer_termiox function may be used

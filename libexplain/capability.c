@@ -26,32 +26,32 @@
 int
 explain_capability(int cap)
 {
-#ifdef HAVE_CAP_GET_PROC
-    cap_t           cap_p;
-
-    cap_p = cap_get_proc();
-    if (cap_p)
-    {
-        cap_flag_t           set;
-        cap_flag_value_t     value;
-        int                  result;
-
-        set = CAP_EFFECTIVE;
-        if (cap_get_flag(cap_p, cap, set, &value) < 0)
-            value = CAP_CLEAR;
-
-        /*
-         * using a temp variable 'result' in case cap_flag_value_t is
-         * implemented as a pointer that is invalid after cap_free()
-         */
-        result = (value != CAP_CLEAR);
-
-        cap_free(cap_p);
-        return result;
-    }
-#else
+//#ifdef HAVE_CAP_GET_PROC
+//    cap_t           cap_p;
+//
+//    cap_p = cap_get_proc();
+//    if (cap_p)
+//    {
+//        cap_flag_t           set;
+//        cap_flag_value_t     value;
+//        int                  result;
+//
+//        set = CAP_EFFECTIVE;
+//        if (cap_get_flag(cap_p, cap, set, &value) < 0)
+//            value = CAP_CLEAR;
+//
+//        /*
+//         * using a temp variable 'result' in case cap_flag_value_t is
+//         * implemented as a pointer that is invalid after cap_free()
+//         */
+//        result = (value != CAP_CLEAR);
+//
+//        cap_free(cap_p);
+//        return result;
+//    }
+//#else
     (void)cap;
-#endif
+//#endif
     return (geteuid() == 0);
 }
 
